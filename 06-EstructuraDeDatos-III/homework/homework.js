@@ -76,7 +76,7 @@ BinarySearchTree.prototype.breadthFirstForEach = function(cb, niveles = []){
     niveles.push(this.right)
 }
 if (niveles.length){ //verificamos si tenemos algo en el array
-  niveles.shift().breadthFirstForEach(cb, niveles) //sacamos el primer elemento del array
+  niveles.shift().breadthFirstForEach(cb, niveles) //sacamos el primer elemento del array para comenzar un nuevo ciclo, es decir, ese primer elemento que sacamos se convierte en el nodo principal y a partir de él comenzamos a preguntar si tiene o no elementos del lado izquierdo o derecho. (se ejecutan de nuevo las primeras fases del código)
   }
 }
 
