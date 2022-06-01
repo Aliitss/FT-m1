@@ -35,15 +35,15 @@ function bubbleSort(array) {
   // el array recibido como parámetro
   // Devolver el array ordenado resultante
   // Tu código:
-let swap = true;
-while (swap) {
-  swap = false;
+let change = true;
+while (change) {
+  change = false;
   for(let i = 0; i < array.length; i++){
     if (array[i] > array[i + 1]){   //condiciono para saber si el ele en la posición 1 es mayor que el ele de la posición 2, si esta condición es verdad entonces...
       let aux = array[i];           //creamos una variable para extraer el valor (el mayor) para poder reasignarlo
       array[i] = array[i + 1];      // array[i] queda vacío ya que su valor fue asignado al aux, entonces se cambia su valor a array[i +1] que era menor que su valor anterior, se reasigna.
       array[i + 1] = aux;           // ver ejemplo 2
-      swap = true;
+      change = true;
     }
   }
 }
